@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+프로그램명: 홈페이지 로그인 화면
+작성자 : 최성운
+작성일 : 2020-06-01
+팀명 : 파이썬클라스 (4조)
+프로그램 설명: 웹사이트 프론트 엔드
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+    .box {
+        width: 100%;
+        
+        
+        border: 1px solid black;
+    }
+    .left {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        height: 550px;
+        background: #E6E6E6;
+    }
+    .right {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: 550px;
+        background: white;
+    }
+    </style>
+</head>
+<body>
+  <center style="margin-bottom:80px; margin-top:50px;">
+    <a href="p&cshop.html" style="background-color:black"><img src="images/로고.png"></a>
+  </center>
+  <div>
+    <div class="left">
+      <center>
+        <h2 style="margin-top:100px; margin-bottom:50px;">로그인</h2>
+      </center>
+<form>
+  <center>
+  <div class="form-group" style="width:70%;">
+    <label for="exampleInputEmail1"></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="이메일을 입력하세요">
+  </div>
+  <div class="form-group"style="width:70%; margin-bottom:50px;">
+    <label for="exampleInputPassword1"></label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="암호">
+  </div>
+ <a class = "btn btn-dark mr-3 btn-lg"href = "p&cshop.html" role = "button">로그인하기</a>
+</center>
+</form>
+    </div> 
+     <div class="right"style="background-image: url(images/10.jpg)">
+      <center>
+        <h2 style="margin-top:100px; margin-bottom:80px; color:white;">신규 회원가입</h2>
+      
+        <p style="color:white;text-align:middle;">
+          원활한 서비스 이용을 위해서 회원가입을 해주세요.
+          <li style="color:white;">상품 구매시 회원정보가 필요합니다.</li>
+          <li style="color:white;margin-bottom:66px;">데이터크롤링을 이용한 웹사이트 입니다.</li>
+        </p>
+  <a class = "btn btn-dark mr-3 btn-lg"href = "signup.html" role = "button" style="border-style:">회원가입하기</a>
+      </center>
+    </div>   
+   </div>
+</html>
