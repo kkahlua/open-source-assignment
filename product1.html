@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+프로그램명 : 홈페이지 상품판매를 위한 구매 페이지
+작성자 : 최성운
+작성일 : 2020-06-15
+팀명 : 파이썬클라스 (4조)
+프로그램 설명: 상품 판매에 필요한 사진, 수량, 사이즈등의 정보를 선택 후 구매창으로 이동
+-->
+<html>
+<head>
+  <meta charset = "utf-8">
+  <meta name="viewport" content = "width=device-width", initial - scale = "1">
+  <title>product</title>
+  <link rel="stylesheet" href = "css/bootstrap.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#000000; color:#ffffff; margin-bottom:100px;">
+    <a class="navbar-brand text-white" href="p&cshop.html">P&Cshop</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            로그인
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="signup.html">회원가입</a>
+            <a class="dropdown-item" href="login.html">로그인</a>
+            <a class="dropdown-item" href="Check_ID.html">아이디 찾기</a>
+            <a class="dropdown-item" href="Check_PW.html">비밀번호 찾기</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            남자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="M_Outer.html">아우터</a>
+            <a class="dropdown-item" href="M_Top.html">상의</a>
+            <a class="dropdown-item" href="M_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="men.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            여자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="W_Outer.html">아우터</a>
+            <a class="dropdown-item" href="W_Top.html">상의</a>
+            <a class="dropdown-item" href="W_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="women.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            카테고리
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="All_Outer.html">아우터</a>
+            <a class="dropdown-item" href="All_Top.html">상의</a>
+            <a class="dropdown-item" href="All_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="All_Product.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">로그아웃</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <br>
+  <div class="media">
+  <img class="mr-5 ml-5" src="images/10.jpg" alt="Generic placeholder image" style="width : 800px; height: 400px;">
+<div class="media-body">
+    <h5 class="mt-0">상품 이름</h5>
+    <h5 class="mt-5">상품 가격: </h5>
+    <div>
+      <br><br>
+      <select class="custom-select" style="width: 542px">
+        <option selected>사이즈 선택</option>
+        <option value="1">S</option>
+        <option value="2">M</option>
+        <option value="3">L</option>
+      </select>
+    </div>
+    <div>
+      <br><br><br>
+      <select class="custom-select" style="width: 542px">
+        <option selected>수량 선택</option>
+        <option value="1">1개</option>
+        <option value="2">2개</option>
+        <option value="3">3개</option>
+      </select>
+    </div>
+<br><br><br><br>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  구매하기
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">구매 확인</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        구매하시겠습니까?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+        <button type="button" class="btn btn-primary">결제하기</button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+</html>

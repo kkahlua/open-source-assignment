@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--
+프로그램명 : 홈페이지 결제 화면
+작성자 : 최성운
+작성일 : 2020-06-13
+팀명 : 파이썬클라스 (4조)
+프로그램 설명: 웹사이트의 결제 페이지
+-->
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content = "width=device-width", initial - scale = "1">
+    <title>Payment</title>
+    <link rel="stylesheet" href = "css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+      .left {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        height: 282px;
+        background: #E6E6E6;
+        border:3px solid black;
+    } 
+    .right {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: auto;
+        background: #E6E6E6;
+        border:3px solid black;
+    }
+    .box {
+        width: 97.35%;                
+        border: 3px solid navy;
+        position:absolute;
+        background: #E6E6E6;
+        bottom:0px;
+    }
+
+    </style>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:50px;">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            로그인
+                 </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="signup.html">회원가입</a>
+                <a class="dropdown-item" href="login.html">로그인</a>
+                <a class="dropdown-item" href="Check_ID.html">아이디 찾기</a>
+                <a class="dropdown-item" href="Check_PW.html">비밀번호 찾기</a>
+            </li>
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            남자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="M_Outer.html">아우터</a>
+            <a class="dropdown-item" href="M_Top.html">상의</a>
+            <a class="dropdown-item" href="M_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="men.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            여자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="W_Outer.html">아우터</a>
+            <a class="dropdown-item" href="W_Top.html">상의</a>
+            <a class="dropdown-item" href="W_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="women.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            카테고리
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="All_Outer.html">아우터</a>
+            <a class="dropdown-item" href="All_Top.html">상의</a>
+            <a class="dropdown-item" href="All_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="All_Product.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">로그아웃</a>
+        </li>
+      </ul>
+            </div>
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="p&cshop.html"style="color:white"><strong>P&C shop</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="background-color:#fcfcfc">
+          <span class="navbar-toggler-icon" style="text-align: center">=</span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+    <h2 style="margin-bottom:50px;text-align:center;">주문 결제</h2>
+    <div class="container"style="text-align: center; position:relative;height:578px;">
+      <div class="left">
+        <h4 style="margin-top:30px;margin-bottom:30px;">배송지 설정</h4>
+        <table>  
+        <tr>
+          <td><label for="ID"style="width:100px;margin-left:15px;">수령인</td>
+          <td><input type="email" name="ID" style="width:250px; height:30px;border-color:none;margin-bottom:20px;" ></td>
+        </tr>
+        <tr>
+          <td><label for="username"style="margin-left:15px;">배송지 주소</label></td>
+          <td><input type="username" name="name" style="width:250px; height:30px;margin-bottom:20px;"> <br/></td>
+        </tr>
+        <tr>
+          <td><label for="username"style="margin-left:15px;">핸드폰 번호</label></td>
+          <td><input type="username" name="identification_number" style="width:250px; height:30px;margin-bottom:20px" value="-를 포함해서 작성해주세요."> <br/></td>
+        </tr>
+      </table>
+    </div>
+    <div class="right">
+        <h4 style="margin-top:30px;margin-bottom:30px;">결제 수단</h4>
+        <table>
+        <tr>  
+          <td><label for="ID"style="width:100px;margin-left:15px;">수령인선택</td>
+          <td><input type="radio" name="gender" value="man">
+            <label for="man" style="margin-right: 100px;">카드</label>
+            <input type="radio" name="gender" value="woman">
+            <label for="woman">계좌이체</label>
+          </td>
+        </tr>
+        <tr>
+          <td><label for="ID"style="width:100px;margin-left:15px;">은행 이름</td>
+          <td><input type="email" name="ID" style="width:250px; height:30px;border-color:none;margin-bottom:20px;" ></td>
+        </tr>
+        <tr>
+          <td><label for="ID"style="width:100px;margin-left:15px;">은행 소유주</td>
+          <td><input type="email" name="ID" style="width:250px; height:30px;border-color:none;margin-bottom:20px;" ></td>
+        </tr>
+         <tr>
+          <td><label for="ID"style="width:100px;margin-left:15px;">카드사</td>
+          <td><input type="email" name="ID" style="width:250px; height:30px;border-color:none;margin-bottom:20px;" ></td>
+        </tr>
+      </table>
+    </div>
+    <div class="box">
+      <h4 style="margin-top:30px;margin-bottom:30px;">최종결제 정보</h4>
+      <li>상품명 : 장고 데이터 </li>
+      <li>수량 : 로 변수 넣어서</li>
+      <li>가격 : 여기에 값 나오게 해줘</li>
+      <div class="button-1">
+        <input type="submit" name=""value="구매하기" style="width: 280px;
+          height: 49px;
+          padding-top: 2px;
+          margin-top: 50px;
+          margin-left: 10px;
+          margin-bottom:30px;
+          background-color: black;
+          color: white;
+          border-color:black;
+          border-width:thin;
+          ">
+      </div>            
+    </div>
+  </div>
+  </body>
+</html>

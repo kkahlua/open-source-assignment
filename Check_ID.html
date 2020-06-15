@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+프로그램명: 홈페이지 로그인 화면
+작성자 : 최성운
+수정일 : 2020-06-12
+팀명 : 파이썬클라스 (4조)
+프로그램 설명: 웹사이트 프론트 엔드
+-->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check_ID</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+    .box {
+        width: 100%;
+        
+        
+        border: 1px solid black;
+    }
+    .left {
+        width: 50%;
+        float: left;
+        box-sizing: border-box;
+        height: 550px;
+        background: #E6E6E6;
+    }
+    .right {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: 550px;
+        background: white;
+    }
+    </style>
+</head>
+<body>
+  <center style="margin-bottom:80px; margin-top:50px;">
+    <a href="p&cshop.html" style="background-color:black"><img src="images/로고.png"></a>
+  </center>
+  <div>
+    <div class="left">
+      <center>
+        <h2 style="margin-top:100px; margin-bottom:100px;">아이디 찾기</h2>
+      </center>
+<form>
+  <center>
+  <div class="form-group" style="width:70%;">
+    <label for="exampleInputEmail1"></label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="주민번호 앞 6자리를 입력하세요.">
+  </div>
+<div style="margin-top:30px;">
+  <a class = "btn btn-dark mr-3 btn-lg"href = "p&cshop.html" role = "button">확인</a>
+
+</div>
+<div style="margin-top:50px;">
+  <h5 style="margin-bottom:20px;">아이디를 찾으셨다면?</h5>
+  <a class = "btn btn-dark mr-3 btn-lg"href = "Check_PW.html" role = "button">비밀번호 찾기</a>
+</div>
+</center>
+</form>
+    </div> 
+     <div class="right"style="background-image: url(images/12.jpg); background-size:cover;">
+      <center>
+        <h2 style="margin-top:100px; margin-bottom:80px; color:white;">신규 회원가입</h2>
+        <p style="color:white;text-align:middle;">
+          아이디가 없으시다면 회원가입을 추천드려요.
+          <li style="color:white;">상품 구매시 회원정보가 필요합니다.</li>
+          <li style="color:white;margin-bottom:66px;">데이터크롤링을 이용한 웹사이트 입니다.</li>
+        </p>
+  <a class = "btn btn-dark mr-3 btn-lg"href = "signup.html" role = "button" style="border-style:">회원가입하기</a>
+      </center>
+    </div>   
+   </div>
+</html>
+
+
+
+
+
+

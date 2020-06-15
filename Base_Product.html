@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--
+프로그램명 : 홈페이지 상품정렬 기본 양식 페이지
+작성자 : 최성운
+작성일 : 2020-06-13
+팀명 : 파이썬클라스 (4조)
+프로그램 설명: 크롤링한 이미지를 넣을 때 사용한다.
+-->
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <meta name="viewport" content = "width=device-width", initial - scale = "1">
+    <title>product</title>
+    <link rel="stylesheet" href = "css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+      li a.active {
+        background-color: #E6E6E6;
+        color: white;
+      }
+      li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+      }
+      .container1{
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 250px;
+  width: 1190.4px;
+}
+.container2{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 250px;
+  width: 1000px;
+  border : 3px solid green;
+}
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:100px;">
+      <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
+         <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            로그인
+                 </a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="signup.html">회원가입</a>
+                <a class="dropdown-item" href="login.html">로그인</a>
+                <a class="dropdown-item" href="Check_ID.html">아이디 찾기</a>
+                <a class="dropdown-item" href="Check_PW.html">비밀번호 찾기</a>
+            </li>
+            <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            남자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="M_Outer.html">아우터</a>
+            <a class="dropdown-item" href="M_Top.html">상의</a>
+            <a class="dropdown-item" href="M_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="men.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            여자
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="W_Outer.html">아우터</a>
+            <a class="dropdown-item" href="W_Top.html">상의</a>
+            <a class="dropdown-item" href="W_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="women.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            카테고리
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="All_Outer.html">아우터</a>
+            <a class="dropdown-item" href="All_Top.html">상의</a>
+            <a class="dropdown-item" href="All_Bottom.html">하의</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="All_Product.html">전체</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color:white">로그아웃</a>
+        </li>
+      </ul>
+            </div>
+    <div class="mx-auto order-0">
+      <a class="navbar-brand mx-auto" href="p&cshop.html"style="color:white"><strong>P&C shop</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2" style="background-color:#fcfcfc">
+          <span class="navbar-toggler-icon" style="text-align: center">=</span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+      <ul class="navbar-nav ml-auto">
+        <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+  <div class="container1">
+    <div class="item">
+  <ul style="list-style-type: none;margin:0; padding: 0;
+  width: 200px; background-color: #000000;">
+      <li><a class="active" href="#home" style="display: block; color:#000000;padding: 8px 16px; text-decoration: none;">카테고리1</a></li>
+      <li><a href="#news" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리2</a></li>
+      <li><a href="#contact" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리3</a></li>
+      <li><a href="#about" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리4</a></li>
+  </ul>
+</div>
+<div class="item">
+  <center>
+  <td>
+    <p><strong>만원에서 5만원 사이로 입력해주세요.</strong></p>
+    <input type="email" name="ID" style="width:100px; height:30px;border-color:none;margin-bottom:20px;" >
+    ~
+    <input type="email" name="ID" style="width:100px; height:30px;border-color:none;margin-bottom:20px;" >
+  </td>
+</center>
+  </div>
+</div> 
+</body>
+</html>
