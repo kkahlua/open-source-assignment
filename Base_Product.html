@@ -105,9 +105,26 @@
           <span class="navbar-toggler-icon" style="text-align: center">=</span>
         </button>
     </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">         <!-- 검색창 in navbar-->
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">        
       <ul class="navbar-nav ml-auto">
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"> <!-- 세부검색 기능을 위한 선택 bar -->
+    <option selected>선택</option>
+    <option value="1">남자</option>
+    <option value="2">여자</option>
+    
+  </select>
+  <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"> <!-- 세부검색 기능을 위한 선택 bar -->
+    <option selected>선택</option>
+    <option value="1">아우터</option>
+    <option value="2">상의</option>
+    <option value="3">하의</option>
+  </select>
+</form>
+        <form class="form-inline my-2 my-lg-0">                                  <!-- 검색창 in navbar-->
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
