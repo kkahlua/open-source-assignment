@@ -2,7 +2,7 @@
 <!--
 프로그램명 : 홈페이지 결제 화면
 작성자 : 최성운
-작성일 : 2020-06-13
+수정일 : 2020-06-21
 팀명 : 파이썬클라스 (4조)
 프로그램 설명: 웹사이트의 결제 페이지
 -->
@@ -19,7 +19,7 @@
         width: 50%;
         float: left;
         box-sizing: border-box;
-        height: 282px;
+        height: 284.4px;
         background: #E6E6E6;
         border:3px solid black;
     } 
@@ -42,14 +42,14 @@
     </style>
   </head>
   <body>
-     <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:50px;">
+      <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:100px;"> <!-- navbar line 48 ~ 116-->
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
          <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             로그인
                  </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">     <!-- dropdown in navbar-->
                 <a class="dropdown-item" href="signup.html">회원가입</a>
                 <a class="dropdown-item" href="login.html">로그인</a>
                 <a class="dropdown-item" href="Check_ID.html">아이디 찾기</a>
@@ -59,7 +59,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             남자
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">        <!-- dropdown in navbar-->
             <a class="dropdown-item" href="M_Outer.html">아우터</a>
             <a class="dropdown-item" href="M_Top.html">상의</a>
             <a class="dropdown-item" href="M_Bottom.html">하의</a>
@@ -71,7 +71,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             여자
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">         <!-- dropdown in navbar-->
             <a class="dropdown-item" href="W_Outer.html">아우터</a>
             <a class="dropdown-item" href="W_Top.html">상의</a>
             <a class="dropdown-item" href="W_Bottom.html">하의</a>
@@ -83,7 +83,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             카테고리
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">         <!-- dropdown in navbar-->
             <a class="dropdown-item" href="All_Outer.html">아우터</a>
             <a class="dropdown-item" href="All_Top.html">상의</a>
             <a class="dropdown-item" href="All_Bottom.html">하의</a>
@@ -92,7 +92,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" style="color:white">로그아웃</a>
+          <a class="nav-link" href="#" style="color:white">로그아웃</a>         <!-- link in navbar-->
         </li>
       </ul>
             </div>
@@ -102,9 +102,26 @@
           <span class="navbar-toggler-icon" style="text-align: center">=</span>
         </button>
     </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">        
       <ul class="navbar-nav ml-auto">
-        <form class="form-inline my-2 my-lg-0">
+        <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"> <!-- 세부검색 기능을 위한 선택 bar -->
+    <option selected>선택</option>
+    <option value="1">남자</option>
+    <option value="2">여자</option>
+    
+  </select>
+  <form class="form-inline">
+  <label class="my-1 mr-2" for="inlineFormCustomSelectPref"></label>
+  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref"> <!-- 세부검색 기능을 위한 선택 bar -->
+    <option selected>선택</option>
+    <option value="1">아우터</option>
+    <option value="2">상의</option>
+    <option value="3">하의</option>
+  </select>
+</form>
+        <form class="form-inline my-2 my-lg-0">                                  <!-- 검색창 in navbar-->
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
         </form>
@@ -136,13 +153,13 @@
         <tr>  
           <td><label for="ID"style="width:100px;margin-left:15px;">수령인선택</td>
           <td><input type="radio" name="gender" value="man">
-            <label for="man" style="margin-right: 100px;">카드</label>
+            <label for="man" style="margin-right: 100px;">카드</label>      <!-- check box-->
             <input type="radio" name="gender" value="woman">
-            <label for="woman">계좌이체</label>
+            <label for="woman">계좌이체</label>                             <!-- check box-->
           </td>
         </tr>
         <tr>
-          <td><label for="ID"style="width:100px;margin-left:15px;">은행 이름</td>
+          <td><label for="ID"style="width:100px;margin-left:15px;">은행 이름</td>     
           <td><input type="email" name="ID" style="width:250px; height:30px;border-color:none;margin-bottom:20px;" ></td>
         </tr>
         <tr>
@@ -157,9 +174,9 @@
     </div>
     <div class="box">
       <h4 style="margin-top:30px;margin-bottom:30px;">최종결제 정보</h4>
-      <li>상품명 : 장고 데이터 </li>
-      <li>수량 : 로 변수 넣어서</li>
-      <li>가격 : 여기에 값 나오게 해줘</li>
+      <li>상품명 :  </li>
+      <li>수량 : </li>
+      <li>가격 : </li>
       <div class="button-1">
         <input type="submit" name=""value="구매하기" style="width: 280px;
           height: 49px;
