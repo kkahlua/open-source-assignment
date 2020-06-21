@@ -2,9 +2,10 @@
 <!--
 프로그램명 : 홈페이지 상품정렬 기본 양식 페이지
 작성자 : 최성운
-작성일 : 2020-06-13
+수정일 : 2020-06-21
 팀명 : 파이썬클라스 (4조)
-프로그램 설명: 크롤링한 이미지를 넣을 때 사용한다.
+프로그램 설명: 크롤링한 데이터들이 들어가는 틀과 같은 페이지 
+              여백에 크롤링 한 데이터들이 들어가게 된다.
 -->
 <html>
   <head>
@@ -24,29 +25,34 @@
         color: white;
       }
       .container1{
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  grid-template-rows: 250px;
-  width: 1190.4px;
-}
-.container2{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 250px;
-  width: 1000px;
-  border : 3px solid green;
-}
+      display: grid;
+      grid-column:1fr;
+      grid-template-rows: 700px 700px;
+      width: 1190.4px;
+      }
+      .container2{
+        width: 80%;
+        float: right;
+        box-sizing: border-box;
+        height: 1fr;
+      }
+    .left {
+        width: 230px;
+        float: left;
+        box-sizing: border-box;
+        height: 1fr;
+    }
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:100px;">
+    <nav class="navbar navbar-expand-md" style="background-color:#000000; color:#ffffff;margin-bottom:100px;"> <!-- navbar line 48 ~ 116-->
       <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
          <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             로그인
                  </a>
-             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">     <!-- dropdown in navbar-->
                 <a class="dropdown-item" href="signup.html">회원가입</a>
                 <a class="dropdown-item" href="login.html">로그인</a>
                 <a class="dropdown-item" href="Check_ID.html">아이디 찾기</a>
@@ -56,7 +62,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             남자
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">        <!-- dropdown in navbar-->
             <a class="dropdown-item" href="M_Outer.html">아우터</a>
             <a class="dropdown-item" href="M_Top.html">상의</a>
             <a class="dropdown-item" href="M_Bottom.html">하의</a>
@@ -68,7 +74,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             여자
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">         <!-- dropdown in navbar-->
             <a class="dropdown-item" href="W_Outer.html">아우터</a>
             <a class="dropdown-item" href="W_Top.html">상의</a>
             <a class="dropdown-item" href="W_Bottom.html">하의</a>
@@ -80,7 +86,7 @@
           <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             카테고리
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">         <!-- dropdown in navbar-->
             <a class="dropdown-item" href="All_Outer.html">아우터</a>
             <a class="dropdown-item" href="All_Top.html">상의</a>
             <a class="dropdown-item" href="All_Bottom.html">하의</a>
@@ -89,7 +95,7 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" style="color:white">로그아웃</a>
+          <a class="nav-link" href="#" style="color:white">로그아웃</a>         <!-- link in navbar-->
         </li>
       </ul>
             </div>
@@ -99,7 +105,7 @@
           <span class="navbar-toggler-icon" style="text-align: center">=</span>
         </button>
     </div>
-    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">         <!-- 검색창 in navbar-->
       <ul class="navbar-nav ml-auto">
         <form class="form-inline my-2 my-lg-0">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -108,17 +114,8 @@
       </ul>
     </div>
   </nav>
-  <div class="container1">
-    <div class="item">
-  <ul style="list-style-type: none;margin:0; padding: 0;
-  width: 200px; background-color: #000000;">
-      <li><a class="active" href="#home" style="display: block; color:#000000;padding: 8px 16px; text-decoration: none;">카테고리1</a></li>
-      <li><a href="#news" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리2</a></li>
-      <li><a href="#contact" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리3</a></li>
-      <li><a href="#about" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;">카테고리4</a></li>
-  </ul>
-</div>
-<div class="item">
+  <div class="container2">                <!-- 가격별 구간 검색  line 117 ~ 128-->
+    <div class="item">                
   <center>
   <td>
     <p><strong>만원에서 5만원 사이로 입력해주세요.</strong></p>
@@ -127,7 +124,28 @@
     <input type="email" name="ID" style="width:100px; height:30px;border-color:none;margin-bottom:20px;" >
   </td>
 </center>
-  </div>
+</div>
 </div> 
+<div class="left">                      <!-- 카테고리 선택 list line 129 ~ 147 -->
+      <div class="item">
+        <ul style="list-style-type: none;margin:0; padding: 0; width: 200px; background-color: #000000;margin-left:0px;">
+          <li><a class="active" href="{% url 'men' %}" style="display: block; color:#000000;padding: 8px 16px; text-decoration: none;margin-top:50px;margin-bottom:50px;">카테고리</a></li>
+          <li><a href="{% url 'M_Outer' %}" style="display: block; color:#FAED7D;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">아우터</a></li>
+          <li><a href="{% url 'M_suit' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">정장</a></li>
+          <li><a href="{% url 'M_coat' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">코트</a></li>
+          <li><a href="{% url 'M_padding' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">패딩</a></li>
+          <li><a href="{% url 'M_Top' %}" style="display: block; color:#FAED7D;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">상의</a></li>
+          <li><a href="{% url 'M_shortshirts' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">반팔</a></li>
+          <li><a href="{% url 'M_longshirts' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">긴팔</a></li>
+          <li><a href="{% url 'M_hoodshirts' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">후드티</a></li>
+          <li><a href="{% url 'M_Bottom' %}" style="display: block; color:#FAED7D;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">하의</a></li>
+          <li><a href="{% url 'M_shortpants' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">반바지</a></li>
+          <li><a href="{% url 'M_jeans' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">청바지</a></li>
+          <li><a href="{% url 'M_suitpants' %}" style="display: block; color:#FFFFFF;padding: 8px 16px; text-decoration: none;margin-bottom:50px;">정장바지</a></li>
+          </ul>
+        </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
